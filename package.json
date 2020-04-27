@@ -1,0 +1,60 @@
+{
+  "name": "vuetify-china-area-select",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "private": false,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "package": "vue-cli-service build --target lib --name vuetify-china-area-select src/index.js"
+  },
+  "dependencies": {
+    "china-area-data": "^4.0.0",
+    "core-js": "^3.6.4",
+    "vue": "^2.6.11",
+    "vuetify": "^2.2.25"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:makeup1122/vuetify-china-area-select.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "makeup1122",
+    "email": "makeup1123@163.com"
+  },
+  "description": "china area data for Vuetify2.x",
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.3.0",
+    "@vue/cli-plugin-eslint": "^4.3.0",
+    "@vue/cli-service": "^4.3.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "material-design-icons-iconfont": "^5.0.1",
+    "node-sass": "^4.14.0",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
