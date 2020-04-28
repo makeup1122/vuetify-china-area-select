@@ -4,7 +4,7 @@
 ```
 npm install vuetify-china-area-select --save
 ```
-## Demo
+## [Demo](https://goingmerry.cn/vuetify-china-area-select/index.html)
 
 ## 使用
 ```
