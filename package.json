@@ -42,7 +42,8 @@
     "node-sass": "^4.14.0",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "vuetify-loader": "^1.4.3"
   },
   "eslintConfig": {
     "root": true,
