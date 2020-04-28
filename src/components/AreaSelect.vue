@@ -4,9 +4,9 @@
  @Date: "2020-02-12 16:29:45"
 -->
 <template>
-  <v-menu offset-y :close-on-content-click="false" v-model="menuValue" allow-overflow max-width="600">
+  <v-menu v-bind="menuAttrs" offset-y :close-on-content-click="false" v-model="menuValue" allow-overflow max-width="600">
     <template v-slot:activator="{ on }">
-      <v-text-field :autocomplete="false" v-on="on" :value="value" @input="inputHandle"></v-text-field>
+      <v-text-field v-bind="$attrs" :autocomplete="false" v-on="on" :value="value" @input="inputHandle"></v-text-field>
     </template>
     <v-row no-gutters style="background-color:#FCFCFC;">
       <v-col style="overflow-y:scroll;height:400px;">
@@ -66,6 +66,18 @@ import AreaData from 'china-area-data/data.js'
 export default {
   name: 'VAreaSelect',
   props: {
+    menuAttrs: {
+      type: Object,
+      default: () => {
+        return {}
+      }
+    },
+    areaData: {
+      type: Object,
+      default: () => {
+        return AreaData
+      }
+    },
     value: {
       type: Array,
       required: true,
@@ -80,7 +92,6 @@ export default {
   },
   data: function () {
     return {
-      AreaData,
       menuValue: false,
       province: {},
       city: {},
@@ -98,21 +109,21 @@ export default {
   },
   computed: {
     provinceItems: function() {
-      const p = Object.entries(this.AreaData['86'])
+      const p = Object.entries(this.areaData['86'])
       return p.map(e => {
         return { code: e[0], text: e[1] }
       })
     },
     cityItems: function() {
       if (!this.province.code) return []
-      const p = Object.entries(this.AreaData[this.province.code])
+      const p = Object.entries(this.areaData[this.province.code])
       return p.map(e => {
         return { code: e[0], text: e[1] }
       })
     },
     countyItems: function() {
       if (!this.city.code) return []
-      const p = Object.entries(this.AreaData[this.city.code])
+      const p = Object.entries(this.areaData[this.city.code])
       return p.map(e => {
         return { code: e[0], text: e[1] }
       })

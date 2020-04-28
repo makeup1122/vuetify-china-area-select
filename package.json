@@ -24,6 +24,12 @@
     "name": "makeup1122",
     "email": "makeup1123@163.com"
   },
+  "keywords": [
+    "vuetify",
+    "china",
+    "area",
+    "select"
+  ],
   "description": "china area data for Vuetify2.x",
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.3.0",
