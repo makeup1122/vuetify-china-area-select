@@ -2,6 +2,7 @@ const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
 
 module.exports = {
   outputDir: 'docs',
+  publicPath: './',
   productionSourceMap: false,
   devServer: {
     disableHostCheck: true, // 绕过host检测
